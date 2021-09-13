@@ -33,7 +33,6 @@
 #define NC_LOG_DEFAULT      LOG_NOTICE
 #define NC_LOG_MIN          LOG_EMERG
 #define NC_LOG_MAX          LOG_PVERB
-#define NC_LOG_PATH         NULL
 
 #define NC_STATS_PORT       STATS_PORT
 #define NC_STATS_ADDR       STATS_ADDR

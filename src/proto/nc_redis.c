@@ -244,6 +244,7 @@ redis_argn(const struct msg *r)
     case MSG_REQ_REDIS_SINTER:
     case MSG_REQ_REDIS_SINTERSTORE:
     case MSG_REQ_REDIS_SREM:
+    case MSG_REQ_REDIS_SREMINT:
     case MSG_REQ_REDIS_SUNION:
     case MSG_REQ_REDIS_SUNIONSTORE:
     case MSG_REQ_REDIS_SRANDMEMBER:
@@ -1115,6 +1116,11 @@ redis_parse_req(struct msg *r)
 
                 if (str7icmp(m, 's', 'a', 'd', 'd', 'i', 'n', 't')) {
                     r->type = MSG_REQ_REDIS_SADDINT;
+                    break;
+                }
+
+                if (str7icmp(m, 's', 'r', 'e', 'm', 'i', 'n', 't')) {
+                    r->type = MSG_REQ_REDIS_SREMINT;
                     break;
                 }
 

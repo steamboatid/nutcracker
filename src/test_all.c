@@ -189,6 +189,10 @@ static void test_redis_parse_req_success(void) {
     test_redis_parse_req_success_case("*4\r\n$7\r\nsaddint\r\n$4\r\nsint\r\n$1\r\n2\r\n$2\r\n11\r\n", MSG_REQ_REDIS_SADDINT);
     test_redis_parse_req_success_case("*5\r\n$7\r\nsaddint\r\n$4\r\nsint\r\n$1\r\n3\r\n$2\r\n12\r\n$3\r\n333\r\n", MSG_REQ_REDIS_SADDINT);
 
+    test_redis_parse_req_success_case("*3\r\n$7\r\nsremint\r\n$7\r\n{sint}2\r\n$1\r\n1\r\n", MSG_REQ_REDIS_SREMINT);
+    test_redis_parse_req_success_case("*4\r\n$7\r\nsremint\r\n$4\r\nsint\r\n$1\r\n2\r\n$2\r\n11\r\n", MSG_REQ_REDIS_SREMINT);
+    test_redis_parse_req_success_case("*5\r\n$7\r\nsremint\r\n$4\r\nsint\r\n$1\r\n3\r\n$2\r\n12\r\n$3\r\n333\r\n", MSG_REQ_REDIS_SREMINT);
+
     test_redis_parse_req_success_case("*2\r\n$5\r\nscard\r\n$4\r\nsfoo\r\n", MSG_REQ_REDIS_SCARD);
     test_redis_parse_req_success_case("*3\r\n$5\r\nsdiff\r\n$6\r\n{sfoo}\r\n$7\r\n{sfoo}2\r\n", MSG_REQ_REDIS_SDIFF);
     test_redis_parse_req_success_case("*4\r\n$10\r\nsdiffstore\r\n$7\r\n{sfoo}3\r\n$6\r\n{sfoo}\r\n$7\r\n{sfoo}2\r\n", MSG_REQ_REDIS_SDIFFSTORE);

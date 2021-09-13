@@ -142,7 +142,7 @@ typedef enum msg_parse_result {
     ACTION( REQ_REDIS_RPUSH )                                                                       \
     ACTION( REQ_REDIS_RPUSHX )                                                                      \
     ACTION( REQ_REDIS_SADD )                   /* redis requests - sets */                          \
-    ACTION( REQ_REDIS_SADDINT )                                                                       \
+    ACTION( REQ_REDIS_SADDINT )                                                                     \
     ACTION( REQ_REDIS_SCARD )                                                                       \
     ACTION( REQ_REDIS_SDIFF )                                                                       \
     ACTION( REQ_REDIS_SDIFFSTORE )                                                                  \
@@ -155,6 +155,7 @@ typedef enum msg_parse_result {
     ACTION( REQ_REDIS_SPOP )                                                                        \
     ACTION( REQ_REDIS_SRANDMEMBER )                                                                 \
     ACTION( REQ_REDIS_SREM )                                                                        \
+    ACTION( REQ_REDIS_SREMINT )                                                                     \
     ACTION( REQ_REDIS_SUNION )                                                                      \
     ACTION( REQ_REDIS_SUNIONSTORE )                                                                 \
     ACTION( REQ_REDIS_SSCAN)                                                                        \
