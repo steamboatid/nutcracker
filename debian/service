@@ -19,5 +19,12 @@ PrivateTmp=true
 ProtectSystem=full
 ProtectHome=read-only
 
+Restart=always
+KillMode=mixed
+RestartSec=2s
+TimeoutStartSec=20s
+TimeoutStopSec=2s
+LimitNOFILE=1048576
+
 [Install]
 WantedBy=multi-user.target
