@@ -81,6 +81,8 @@ nbproject/*
 *bak
 
 # debian packaging
+/debian/.debhelper/*/*
+debian/.debhelper/*/*
 debian/.debhelper/*
 debian/.debhelper
 
